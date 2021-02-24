@@ -3,27 +3,25 @@ $('#currentDay').text(today.format("MMM Do, YYYY"));
 
 // function timeFunction() {
 // var currentTime = moment().hour();
-// var hour = document.getElementsByClassName('.hour');
-// var timeBlock = document.getElementsByTagName('textarea');
+// var hour = document.querySelectorAll('#hour8 #hour9 #hour10 #hour11 #hour12 #hour13 #hour14 #hour15 #hour16 #hour17');
+// var plannerBlock = document.getElementsByTagName('.time-block');
 
 // if (hour === currentTime) {
-// timeBlock.setAttribute('class', '.present');
+// plannerBlock.setAttribute('class', '.present');
 
-//  } else if (hour < curentTime) {
-//      timeBlock.setAttribute('class', '.past');
-//  } else {
-//      timeBlock.setAttribute('class', '.future');
-//  }
+//  } else  (hour < currentTime) 
+//     plannerBlock.setAttribute('class', '.future');
 // }
 
 var currentTime = moment().hour();
-var currentHour = getElementsByClassName('.hour');
-var textArea = document.getElementsByTagName('textarea');
-var pastTime = document.getElementsByClassName('hour', '.past');
+var currentHour = document.querySelectorAll('#hour8 #hour9 #hour10 #hour11 #hour12 #hour13 #hour14 #hour15 #hour16 #hour17');
+var plannerBlock = document.getElementsByClassName('.description');
+var pastTime = document.getElementsByClassName('.past');
 if (currentHour === currentTime) {
-    textArea.classname = '.present';
+    plannerBlock.classname = '.present';
 } else (currentHour > currentTime) 
-    textArea.setAttribute('textarea', '.future');
+    plannerBlock.classname = '.future';
 
 
+//text entry into plannerBlock and save to local storage upon save
 
